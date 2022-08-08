@@ -10,7 +10,7 @@ server.on('request', (request, response) => {
   // response.end();
 
   if (request.method === 'GET') {
-    if (request.url === '/about') {
+    if (request.url === '/about') { // GET /about
       response.write('this is the about page');
     } else if (request.url === '/home') {
       response.write('welcome to the home page');
