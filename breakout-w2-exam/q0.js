@@ -35,8 +35,8 @@ const tempConverter = function(value, cToF) {
   }
 
   // (32°F − 32) × 5/9 = 0°C if cToF is false
-  const celcius = (value - 32) * 5/9;
-  return parseFloat(celcius.toFixed(1));;
+  const celsius = (value - 32) * 5/9;
+  return parseFloat(celsius.toFixed(1));;
 };
 
 
