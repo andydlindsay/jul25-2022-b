@@ -17,8 +17,40 @@ Examples:
 
 */
 
-const countWhich = function(list, cb) {
+// let count = 0;
+// for (let i = 0; i < list.length; i++) {
+//   if (cb(list[i])) {
+//     count++;
+//   }
+// }
+// return count;
 
+
+const countWhich = function(list, cb) {
+  if (!Array.isArray(list)) {
+    return false;
+  }
+
+  return list.filter(cb).length;
+
+  // // set up a variable to count how many elements pass the test
+  // let count = 0;
+
+  // // loop through the array
+  // for (let i = 0; i < list.length; i++) {
+  //   // const element = list[i];
+
+  //   // call the provided callback with the element AND capture the return value from the cb
+  //   const returnVal = cb(list[i]);
+
+  //   // if the return value is truthy, add one to the count
+  //   if (returnVal) {
+  //     count += 1;
+  //   }
+  // }
+
+  // // return the count
+  // return count;
 };
 
 // Don't change below:

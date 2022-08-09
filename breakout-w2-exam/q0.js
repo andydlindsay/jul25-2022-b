@@ -19,8 +19,24 @@ Examples:
 
 */
 
-const tempConverter = function(value, cToF) {
+// BEDMAS
+// PEDMAS
 
+const tempConverter = function(value, cToF) {
+  if (typeof value !== 'number') {
+    return NaN;
+  }
+
+  if (cToF) {
+    // (0°C × 9/5) + 32 = 32°F if cToF is true
+    const fahrenheit = (value * 9/5) + 32;
+    return parseFloat(fahrenheit.toFixed(1));
+    // return fahrenheit;
+  }
+
+  // (32°F − 32) × 5/9 = 0°C if cToF is false
+  const celcius = (value - 32) * 5/9;
+  return parseFloat(celcius.toFixed(1));;
 };
 
 

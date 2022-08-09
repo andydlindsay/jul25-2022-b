@@ -26,8 +26,63 @@ Examples:
 
 */
 
-const minmax = function(list) {
+// const minmax = function(list) {
+//   if (typeof list[0] === 'number') {
+//     list.sort((a, b) => {
+//       return a - b;
+//     });
+//   } else {
+//     list.sort();
+//   }
+//   return [list[0], list[list.length - 1]];
+// };
 
+// const minmax = function(list) {
+//   if (list.length === 0) {
+//     return [undefined, undefined];
+//   }
+//   const slicedList = list.slice(0);
+//   const strBool = (typeof(slicedList[0]) === 'string');
+//   strBool ? slicedList.sort() : slicedList.sort((a, b) => a - b);
+//   let min = slicedList[0];
+//   let max = slicedList[slicedList.length - 1];
+//   return [min, max];
+// };
+
+// const minmax = function(list) {
+//   let final = [];
+//   let array = list;
+//   if (list.length === 0) {
+//     return final = [undefined, undefined];
+//   }
+//   for (let x = 0; x < list.length; x++) {
+//     if (!Number.isFinite(list[x])) {
+//       array.sort();
+//       final.push(array[0], array[array.length - 1]);
+//       // return final;
+//     } else {
+//       array = list.sort((a, b) => a - b);
+//       final.push(array[0], array[array.length - 1]);
+//     }
+//     return final;
+//   }
+// };
+
+
+const minmax = function(list) {
+  if (list.length === 0) {
+    return [undefined, undefined];
+  }
+
+  list.sort();
+
+  if (typeof list[0] === 'number') {
+    list.sort(function (a, b) {
+      return a - b;
+    });
+  }
+
+  return [list[0], list[list.length - 1]];
 };
 
 // Don't change below:
