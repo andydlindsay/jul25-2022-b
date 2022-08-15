@@ -6,3 +6,4 @@
 * [BREAKOUT - Week 2 Exam Review](/breakout-w2-exam)
 * [W04D01 - Intro to CSS](/w04d01)
 * [W04D02 - Client Side JavaScript & jQuery](/w04d02)
+* [BREAKOUT - Week 3 Exam Review](/breakout-w3-exam)
