@@ -1,0 +1,18 @@
+html {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+div.content {
+  color: royalblue;
+  font-family: serif;
+}
+
+#main-list {
+  border: 2px dotted magenta;
+  border-radius: 15px;
+  margin: 10px auto;
+  color: lawngreen;
+  padding: 10px 30px;
+}
