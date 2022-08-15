@@ -1,19 +1,24 @@
 # W04D01 - Intro to CSS
 
 ### To Do
-* [ ] Demo this week's project
-* [ ] Semantic Tags
-* [ ] Attributes
-* [ ] Intro to CSS
-* [ ] Inline styles
-* [ ] Style element
-* [ ] Selectors
-* [ ] DevTools
-* [ ] Box Model and Box Sizing
-* [ ] External Stylesheets
-* [ ] CSS Resets/Normalize
-* [ ] Specificity
+* [x] Demo this week's project
+* [x] Semantic Tags
+* [x] Attributes
+* [x] Intro to CSS
+* [x] Inline styles
+* [x] Style element
+* [x] Selectors
+* [x] DevTools
+* [x] Box Model and Box Sizing
+* [x] External Stylesheets
+* [x] CSS Resets/Normalize
+* [x] Specificity
 
+### The Browser
+* separation of concerns
+* HTML - basic layout, skeleton, markup, wrapping the content
+* CSS - styling
+* JS - functionality
 
 
 
