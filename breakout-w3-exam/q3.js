@@ -23,7 +23,29 @@ Examples:
 */
 
 const deepArrayToObject = function(arr) {
+  // create a return obj
+  const returnObj = {};
 
+  // loop through the provided arr
+  for (const element of arr) {
+    // pull out the key and value from the subarray
+    const key = element[0];
+    const value = element[1];
+
+    // is the value an array?
+    // if (Array.isArray(value)) {
+    //   // if yes, then we need to use recursion
+    //   returnObj[key] = deepArrayToObject(value);
+    // } else {
+    //   // else, add the key/value pair to the return obj
+    //   returnObj[key] = value;
+    // }
+
+    returnObj[key] = Array.isArray(value) ? deepArrayToObject(value) : value;
+  }
+
+  // return the return obj
+  return returnObj;
 };
 
 // Don't change below:

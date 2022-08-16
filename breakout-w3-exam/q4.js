@@ -4,7 +4,7 @@
 
 This is a STRETCH QUESTION.
 
-Given a size in bits convert it to relevant size in B/KB/MB/GB/TB.
+Given a size in bytes convert it to relevant size in B/KB/MB/GB/TB.
 Round your answers to two decimal places at most. Use base 10 for sizes.
 
 - 1 B
@@ -28,7 +28,18 @@ Examples:
 */
 
 const filesize = function(bytes) {
+  const sizes = ['B', 'kB', 'MB', 'GB'];
 
+  for (const size of sizes) {
+    if (bytes < 1000) {
+      return `${bytes}${size}`;
+    }
+
+    // bytes = bytes / 1000;
+    bytes /= 1000;
+  }
+
+  return `${bytes}TB`;
 };
 
 // Don't change below:

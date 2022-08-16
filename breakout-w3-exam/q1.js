@@ -21,7 +21,23 @@ Examples:
 */
 
 const arrayToObject = function(arr) {
+  // return Object.fromEntries(arr);
 
+  // create the return obj
+  const returnObj = {};
+
+  // loop through the array
+  for (const subarray of arr) {
+    // pull out the key and value from the subarray
+    const key = subarray[0];
+    const value = subarray[1];
+
+    // add the key/value pair to the return obj
+    returnObj[key] = value;
+  }
+
+  // return the obj we created
+  return returnObj;
 };
 
 // Don't change below:

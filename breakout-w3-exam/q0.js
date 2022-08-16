@@ -20,7 +20,24 @@ Examples
 */
 
 const objectToArray = function(obj) {
+  // return Object.entries(obj);
 
+  // create an array to hold the other arrays
+  const outer = [];
+
+  // loop through the object's keys
+  for (const key in obj) {
+    // grab the value associated with that key
+    // const value = obj[key];
+    // // create the subarray from key/value pair
+    // const subarray = [key, value];
+    // // push the subarray into the outer array
+    // outer.push(subarray);
+    outer.push([key, obj[key]]);
+  }
+
+  // return the outer array
+  return outer;
 };
 
 // Don't change below:
