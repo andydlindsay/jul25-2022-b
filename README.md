@@ -7,3 +7,4 @@
 * [W04D01 - Intro to CSS](/w04d01)
 * [W04D02 - Client Side JavaScript & jQuery](/w04d02)
 * [BREAKOUT - Week 3 Exam Review](/breakout-w3-exam)
+* [W05D01 - SQL Intro](/w05d01)
