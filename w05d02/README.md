@@ -56,12 +56,12 @@
 
 ### Convert Two Spreadsheets into an ERD
 - [Spreadsheets](https://gist.github.com/andydlindsay/20e7305e853bad7b587f294b054cf8de)
-- [Authors Books ERD]()
+- [Authors Books ERD](https://raw.githubusercontent.com/andydlindsay/jul25-2022-b/master/w05d02/books%20authors.png)
 
 ### Student Suggestion: Soap Company!
 We created an ERD for a soap company:
 
-![Soap Company ERD]()
+![Soap Company ERD](https://raw.githubusercontent.com/andydlindsay/jul25-2022-b/master/w05d02/soap%20company.png)
 
 ### Useful Links
 * [Database Normalization](https://en.wikipedia.org/wiki/Database_normalization)
