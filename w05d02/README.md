@@ -10,45 +10,61 @@
 - [x] Convert 2 Spreadsheets to ERD
 - [x] Student Suggestion ERD(s)!
 
-### Primary Keys, Foreign Keys
-* uniquely identify a particular record
-* unique within the table, cannot be null
-* can be any data type
-* PK are always `id`
-* FK are going to be table name singular plus _id (`user_id`, `post_id`)
+### Primary Key
+
+- A way of uniquely identifying a particular record within a table 
+- Must be unique (within the table) and can never be null
+- The usual data type is auto-incrementing integer (`INTEGER` or `BIGINT`)
+- A Primary Key stored in another table is known as a `Foreign Key`
+- The Primary Key and Foreign Key **MUST** be the same data type
 
 ### Naming Conventions
-* table names are always plural
-* snake_case for all table and field names
+
+- Table and field names are written in `snake_case`
+- Table names are always pluralized
+- The primary key for each table will simply be called `id`
+- A foreign key is made up of the singular of the primary keys table and the suffix `_id` (eg. `user_id` is the foreign key for the `id` field in the `users` table)
 
 ### Data Types
-* every field needs a data type declared
-* db will set aside room even if the value is null
+
+- Each field in a table **must** have a data type defined for it
+- The data type tells the database how much room to set aside to store the value _and_ allows the database to perform type validation on data before insertion (to protect the data integrity of the table)
+- Choosing the perfect data type is less of a concern nowadays because memory is now comparably cheap
 
 ### Relationship Types
-* one-to-one - one record in the 1st table is related to only one record in the 2nd table
-* one-to-many - one record in the 1st table is related to one or more records in the 2nd
-* many-to-many - one or more records in the 1st table are related to one or more records in the 2nd
+
+- **One-to-One**: One record in the first table is related to one (and only one) record in the second table
+- **One-to-Many**: One record in the first table is related to one or more records in the second table
+- **Many-to-Many**: One or more records in the first table are related to one or more records in the second table
+
+- It could be argued that there is really only one relationship type: _One-to-Many_ as One-to-One's are extremely rare and Many-to-Many's are implemented using two _One-to-Many's_
 
 ### Design Concepts
-* required - think about the initial state of the record
-* default NOW(), is_active true
-* don't use calculated fields
-* pulling repeated values out to lookup table
-* try not to delete anything, isActive false
 
-Saskatoon
-S'toon
-Toontown
-Sasktoon
+- Make fields required based on the records state upon initial creation (remember that additional data can be added to a record after it has been created)
+- Intelligent default values can be set for fields (such as the current timestamp for a `created_on` field)
+- Don't use calculated fields (a field that can be derived from one or more other fields, such as `full_name` is a combination of `first_name` and `last_name`)
+- Pull repeated values out to their own table and make reference to them with a foreign key
+- Try not to delete anything (use a boolean flag instead to mark a record as active or inactive)
+- Consider using a `type` field instead of using two (or more) tables to store very similar data (eg. create an `orders` table with an `order_type` field instead of a `purchase_orders` and a `sales_orders` table)
 
-### Entity Relationship Diagrams
-* describe the relationships between all of the tables
-* white board, low fidelity, pen and paper
+### Entity Relationship Diagram (ERD)
 
+- A visual depiction of the database tables and how they are related to each other
+- Extremely useful for reasoning about how the database should be structured
+- Can be created using pen and paper, a whiteboard, or using an online application
 
+### Convert Two Spreadsheets into an ERD
+- [Spreadsheets](https://gist.github.com/andydlindsay/20e7305e853bad7b587f294b054cf8de)
+- [Authors Books ERD]()
 
+### Student Suggestion: Soap Company!
+We created an ERD for a soap company:
 
+![Soap Company ERD]()
 
-
-
+### Useful Links
+* [Database Normalization](https://en.wikipedia.org/wiki/Database_normalization)
+* [Postgres Data Types](http://www.postgresqltutorial.com/postgresql-data-types/)
+* [Relationship Types](http://etutorials.org/SQL/Database+design+for+mere+mortals/Part+II+The+Design+Process/Chapter+10.+Table+Relationships/Types+of+Relationships/)
+* [draw.io (online ERD)](https://www.draw.io/)
