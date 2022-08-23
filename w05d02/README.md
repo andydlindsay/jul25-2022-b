@@ -56,7 +56,7 @@
 
 ### Convert Two Spreadsheets into an ERD
 - [Spreadsheets](https://gist.github.com/andydlindsay/20e7305e853bad7b587f294b054cf8de)
-- [Authors Books ERD](https://raw.githubusercontent.com/andydlindsay/jul25-2022-b/master/w05d02/books%20authors.png)
+- ![Authors Books ERD](https://raw.githubusercontent.com/andydlindsay/jul25-2022-b/master/w05d02/books%20authors.png)
 
 ### Student Suggestion: Soap Company!
 We created an ERD for a soap company:
