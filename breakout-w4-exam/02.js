@@ -18,8 +18,28 @@ The request library is already installed in this project, and you can require an
 
 */
 
+const request = require('request');
+
+// Logic
+// Syntax
+// Data
+
 const fetchDataForUser = function(url, username, callback) {
   // IMPLEMENT ME
+
+  request(url, (error, response, body) => {
+    if (error) {
+      return callback(error, null);
+    }
+
+    // console.log('response', response);
+    // console.log('body', body);
+    const parsedBody = JSON.parse(body);
+    const winsAndLoses = parsedBody.users[username];
+    // console.log('winsAndLoses', parsedBody);
+
+    callback(null, winsAndLoses);
+  });
 };
 
 

@@ -17,8 +17,37 @@ However:
 
 const doShortlyExpectingTruthy = function(callback, delay, data) {
   // IMPLEMENT ME
+
+  // return new Promise(() => {
+  //   setTimeout(() => {
+  //     callback(data);
+  //   }, delay);
+  // });
+
+  const promise = new Promise((resolve, reject) => {
+
+    setTimeout(() => {
+      const returnVal = callback(data);
+
+      if (returnVal) {
+        return resolve(returnVal);
+      }
+
+      reject('Falsy value retrieved');
+    }, delay);
+
+  });
+
+  return promise;
 };
 
 
 // Don't change below:
 module.exports = { doShortlyExpectingTruthy };
+
+
+// return new Promise(() => {
+//   setTimeout(() => {
+//     callback(data);
+//   }, delay);
+// });

@@ -24,10 +24,29 @@ The callback should be called with two arguments:
 
 */
 
+const fs = require('fs');
+
 const sumFileData = function(filePath1, filePath2, callback) {
   // IMPLEMENT ME
+
+  fs.readFile(filePath1, { encoding: 'utf-8' }, (err, fileOneContents) => {
+    if (err) {
+      return callback(err, null);
+    }
+
+    fs.readFile(filePath2, { encoding: 'utf-8' }, (err, fileTwoContents) => {
+      if (err) {
+        return callback(err, null);
+      }
+
+      const sum = Number(fileOneContents) + Number(fileTwoContents); // '4224' 66
+
+      callback(null, sum);
+    });
+  });
 };
 
 
 // Don't change below:
 module.exports = { sumFileData };
+

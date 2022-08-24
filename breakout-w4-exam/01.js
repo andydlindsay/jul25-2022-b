@@ -13,6 +13,13 @@ Arguments:
 
 const doShortly = function(callback, delay, data) {
   // IMPLEMENT ME
+
+  // setTimeout(() => {
+  //   callback(data);
+  // }, delay);
+
+  setTimeout(callback, delay, data);
+  
 };
 
 
