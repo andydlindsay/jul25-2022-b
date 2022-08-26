@@ -67,5 +67,9 @@ const myRouterFn = require('./routes/my-router.js');
 app.use('/my-routes', myRouterFn(dbConnection));
 ```
 
+### Flow Diagram
+
+![HTTP Request with Routers](https://github.com/andydlindsay/jul25-2022-b/blob/master/breakout-express-router/http%20request%20through%20routers.drawio.png?raw=true)
+
 ### Useful Links
 * [Express Router docs](https://expressjs.com/en/4x/api.html#router)
