@@ -3,7 +3,7 @@ import './App.css';
 const App = () => {
   return (
     <div className="App">
-      <h2>Side Effects in React</h2>
+      <h2>[ Placeholder ]</h2>
     </div>
   );
 };
