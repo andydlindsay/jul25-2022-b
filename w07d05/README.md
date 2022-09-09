@@ -9,9 +9,6 @@
 - [x] `useRequest`
 - [x] `useKeyPress`
 
-### Custom Hook
-* helper function that uses a hook internally
-
 ### Custom Hooks
 - From the [React Docs](https://reactjs.org/docs/hooks-custom.html):
 > Building your own Hooks lets you extract component logic into reusable functions.
